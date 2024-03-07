@@ -2,10 +2,7 @@ const express = require("express")
 const middleware = require("./middleware.user")
 const controller = require("./controller.user")
 
-
 const userRouter = express.Router()
-
-
 
 userRouter.get("/signup",(req, res)=>{
     const message = req.flash("messageKey")

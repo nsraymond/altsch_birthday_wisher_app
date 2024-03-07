@@ -7,7 +7,6 @@ const cron = require("node-cron")
 const userModel = require("./model/user")
 const {sendEmail} = require("./util/nodemailer")
 const {DateTime} = require("luxon")
-// const inspiration = require('inspirational-quotes');
 const flash = require("connect-flash")
 const cookieParser = require("cookie-parser");
 const session = require("express-session")
@@ -76,7 +75,6 @@ cron.schedule("0 8 * * *", async ()=>{
     const users = await userModel.find({verified:true})
     const index = Math.floor(Math.random()*wishes.length)
     const imagePath = path.join(__dirname, 'public', 'android-chrome-192x192.png');
-    // const image1Base64 = fs.readFileSync(imagePath, 'base64');
     for(const user of users){
         if(user.dateOfBirth.getMonth() + 1 === new Date(Date.now()).getMonth() + 1 && user.dateOfBirth.getDate() === new Date(Date.now()).getDate()){
             const option = {

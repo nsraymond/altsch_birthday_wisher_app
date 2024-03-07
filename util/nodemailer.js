@@ -9,9 +9,6 @@ const transporter = nodemailer.createTransport({
         pass:process.env.AUTH_PASS
     }
 })
-
-
-
     await transporter.sendMail({
       from:process.env.AUTH_EMAIL,
       to:option.email,

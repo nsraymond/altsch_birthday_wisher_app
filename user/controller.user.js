@@ -37,7 +37,7 @@ try{
 
 const sendVerificationEmail = async ({_id, userName, email}, res, req)=>{
 try{
-    const currUrl = "http://localhost:5000"
+    const currUrl = "https://birthday-wisher-app.onrender.com"
     const uniqueString = uuidv4() + _id
     const option = {
         email:email,
