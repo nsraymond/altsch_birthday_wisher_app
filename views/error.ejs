@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Error</title>
+    <style>
+        div li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a id="home" href="/">Home</a>
+    </nav>
+    <main id="errorContainer" class="error-page">
+        <div class="error-content">
+            <h1 class="error-title"><%=message%></h1>
+            <p class="error-message">We're sorry, but an error occurred while processing your request.</p>
+            <p class="error-suggestion">Here are some things you can try:</p>
+            <ul class="error-suggestions">
+                <li>Refresh the page and try again.</li>
+                <li>Check your internet connection.</li>
+                <li>Contact the website administrator for further assistance.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,266 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#mainContainer, #mainContainer2{
+    /* background:url("./birthday_flower_image.jpg")  no-repeat center center; */
+    background-size:cover;
+    background-clip:content-box;
+    text-align: center;
+    padding: 16px 0;
+    margin: 0;
+}
+
+#mainContainer2{
+    /* background:url("./birthday-flower2.jpg")  no-repeat center center; */
+}
+
+#errorContainer{
+    background-color: white;
+    text-align: center;
+    padding: 16px 0;
+    margin: 0; 
+}
+
+nav{
+    background-color:rgb(0, 0, 0); 
+    padding: 10px; 
+    display: flex; 
+    justify-content: start;
+}
+
+#home{
+    color: white;
+    background-color:black;
+    padding: 10px;
+    border:none;
+    text-decoration: none; 
+    border-radius: 10px;
+}
+
+#home:hover{
+    color: green;
+}
+
+#signupHeading{
+    background-color: white;
+    border-radius: 30px 30px 0 0;
+    width: 10rem;
+    margin:20px auto;
+}
+
+#form{
+    padding: 20px;
+    border-radius: 40px;
+    width: 70%;
+    margin:20px auto;
+    opacity: 0.85;
+}
+
+label{
+    font-size: 30px;
+    
+}
+
+#username, #email, #dateOfBirth{
+    margin-bottom: 20px;
+}
+
+input{
+    width: 50%;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+}
+
+#submit{
+    margin-top: 30px;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#successImage, #oppsImage{
+    width:300px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+#welcome{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    margin-bottom: 70px;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+#logo2{
+    width: 50px;
+    height: 50px;
+}
+
+input{
+    margin: auto;
+    display: block;
+}
+
+#signupBtn{
+    text-align: center;
+    padding: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width:10%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    animation: here 1s ease-in-out infinite;
+}
+
+@keyframes here{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+#today{
+    background-color: white;
+    color: black;
+    padding:5px;
+    width:15% ;
+    margin:80px auto 0px;
+    border-radius: 30px 30px 0 0;
+}
+
+#quote{
+    background-color:black;
+    color:white;
+    padding:5px;
+    width:30% ;
+    margin:0px auto 20px;  
+}
+
+#dot{
+    font-size: 24px;
+}
+
+.motivate{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.motivate a{
+    text-decoration: none;
+    background-color: green;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#authMessage, #authMessage2, #flashMessage, #flashMessage2{
+    background-color: white;
+    padding: 5px;
+    font-size: 24px;
+    width: 70%;
+    margin: 10px auto;
+}
+
+#authMessage, #flashMessage{
+    width:30%
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 20px;
+    color: white; 
+    margin-top: 0; 
+}
+
+@media(max-width:500px){
+    footer{
+        display: grid;
+        text-align: center;
+    }
+
+    .motivate{
+        font-size: 18px;
+    }
+
+    .motivate a{
+        font-size: 16px;
+    }
+
+    #today{
+        font-size: 16px;
+        border-radius:10px 10px 0 0 ;
+        width: 25%;
+    }
+
+    #signupBtn{
+        font-size: 16px;
+        padding: 15px;  
+    }
+
+    #dot{
+       font-size: 18px; 
+    }
+
+    #logo{
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #logo2{
+        width: 35px;
+        height: 35px;
+    }
+
+    label{
+       font-size: 18px; 
+       font-weight: bold;
+    } 
+
+    #signupHeading{
+        font-size: 20px;
+    }
+
+    #submit{
+        font-size: 18px;
+    }
+
+    #quote{
+        width: 70%;
+    }
+    
+}
+
+@media(max-width:900px){
+    #username, #email, #dateOfBirth{
+        width: 80%;
+        font-size: 16px;
+    }
+}

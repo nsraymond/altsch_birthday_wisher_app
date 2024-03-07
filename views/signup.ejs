@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #mainContainer2 {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        #successImage {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        #flashMessage {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #flashMessage2 {
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        #signupHeading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="Date"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: calc(100% - 22px);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <main id="mainContainer2">
+        <%if(message != ''){%>
+            <h1 id="flashMessage"><%= message%></h1>
+            <p id="flashMessage2">We have sent a verification link to your email. Check your email.</p>
+        <%}else{%>
+            <h1 id="signupHeading">Signup</h1>
+            <form id="form" action="/users/signup", method="POST">
+                <label for="username">Username</label>
+                <input id="username" type="text" name="userName">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input id="dateOfBirth" type="Date" name="dateOfBirth">
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        <%}%>
+    </main>
+</body>
+</html>
